@@ -1,9 +1,9 @@
 name: "my-website"
 output_dir: "."
 navbar:
-  title: "My Website"
+  title: "Teen Sexual Health and Relationships"
   left:
     - text: "Home"
       href: index.html
-    - text: "About"
-      href: about.html
+    - text: "State-Level Trends"
+      href: statetrends.html
