@@ -1,0 +1,78 @@
+---
+title: "Map of Crime"
+output: html_document
+---
+
+# Mapping Crime in NYC
+
+```{r, message=FALSE, warning=FALSE, echo=FALSE}
+# Load packages
+packages <- c("devtools","knitr","leaflet","shiny","raster","rgdal","RColorBrewer")
+
+packages <- lapply(packages, FUN = function(x) {
+  if(!require(x, character.only = TRUE)) {
+    install.packages(x)
+    library(x, character.only = TRUE)
+  }
+})
+
+# Get data on NYC police complaints
+library(readr)
+nypd <- read_csv("data/NYPD_Complaint_2016-12_Manhattan.csv")
+```
+
+## Crime locations in Lower Manhattan
+
+```{r, eval=TRUE, message=FALSE, warning=FALSE, echo=FALSE}
+# Get data on NYC police complaints
+library(readr)
+nypd <- read_csv("data/NYPD_Complaint_2016-12_Manhattan.csv")
+```
+
+```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE}
+m <- leaflet(nypd) %>% 
+     addTiles('http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png') %>%
+     setView(-73.9949344, 40.7179112, zoom = 14)
+m %>% addCircles(col="orange")
+```
+
+```{r, eval=TRUE, echo=FALSE}
+# Selected offenses
+# sort(table(nypd$offense_desc1))
+off <- nypd$offense_desc1 
+offsel <- NA
+offsel <- ifelse(off=="GRAND LARCENY" | off=="PETIT LARCENY" | off=="THEFT-FRAUD" | off=="THEFT OF SERVICES", "Theft", offsel)
+offsel <- ifelse(off=="HARRASSMENT", "Harrassment", offsel)
+offsel <- ifelse(off=="ASSAULT 3 & RELATED OFFENSES" | off=="FELONY ASSAULT", "Assault", offsel)
+offsel <- ifelse(off=="DANGEROUS DRUGS", "Drugs", offsel)
+offsel <- ifelse(is.na(offsel), "Other Crime", offsel)
+nypd$offsel1 <- offsel
+```
+
+```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE}
+# Grab a palette
+library(RColorBrewer)
+pal = colorFactor("Set1", domain = nypd$offsel1)
+color_offsel1 <- pal(nypd$offsel1)
+```
+
+## Crime types
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+content <- paste("Type:",nypd$offense_desc1,"<br/>",
+                 "When:",nypd$date,"<br/>",
+                 "Where:",nypd$premise_type,"<br/>",
+                 "Severity:",nypd$crimelevel,"<br/>",
+                 "Description:",nypd$offense_desc2)               
+                
+m %>% addCircles(color=color_offsel1, popup = content)
+```
+
+## Crime Clusters
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+m %>% addCircleMarkers(color=color_offsel1, popup = content, 
+  clusterOptions = markerClusterOptions()) 
+```
+
+

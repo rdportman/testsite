@@ -1,0 +1,28 @@
+---
+title: "Shiny App Example"
+output: html_document
+---
+
+
+<div class="row" style="padding-top: 30px;">
+<div class="col-sm-6">
+
+# Shiny Things
+
+## Embedding a Shiny App
+
+I do not have the crime data in a Shiny App. Here, I am using the Drinkr example shiny app. I published it to my shinyapps.io account: https://qmss.shinyapps.io/drinkr_shiny_example/
+
+Add the following code to your document:
+
+```
+<iframe src="website" style="border: none; width: 440px; height: 900px"></iframe>
+```
+
+Change the website to your shiny app website address (in my case: https://qmss.shinyapps.io/drinkr_shiny_example/) and you can adjust the width and height as well. Notice that you will not see anything if you knit it using Rstudio markdown. But it will show the results when you open it on browser.
+
+## An example of a shiny app
+
+<iframe src="https://qmss.shinyapps.io/drinkr_shiny_example/" style="border: none; width: 440px; height: 900px"></iframe>
+
+

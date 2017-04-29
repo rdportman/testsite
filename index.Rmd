@@ -1,0 +1,37 @@
+---
+title: "Crime in NYC"
+output: html_document
+---
+
+<style type="text/css">
+.title {
+  display: none;
+}
+
+img {
+  margin: 40px;
+}
+
+</style>
+
+<div class="row" style="padding-top: 30px;">
+<div class="col-sm-6">
+
+# **Oh crime, where art thou?**
+
+Crime in major metropolitan areas has been decreasing for a few decades. But criminal activities remain, perhaps in different form. 
+
+![](images/violent_crime_six_large_cities_3.jpg)
+
+
+# **Crime in NYC**
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum convallis nisi tortor, et feugiat ex aliquet ac. Nulla at dictum velit, sit amet ultricies tortor. Donec sollicitudin, eros quis commodo consequat, nisi ex tempus ipsum, vitae ultrices turpis nisl vel nunc. Etiam iaculis sagittis justo, sit amet posuere tellus fermentum a. Donec vel euismod sem, id laoreet dui. Nam eget magna quis orci mattis placerat nec sit amet risus. Vivamus at arcu eget nisi eleifend placerat. Morbi mattis, metus vitae suscipit venenatis, massa dui suscipit neque, a laoreet nibh erat nec lacus. Sed porta dignissim tortor vitae vehicula. Aenean interdum pharetra erat in convallis. Integer lobortis justo sed risus posuere, id varius libero molestie. Nulla ultrices finibus cursus.
+
+Suspendisse potenti. Cras tempor magna purus, vel posuere nunc dapibus a. Donec orci dolor, volutpat in velit in, accumsan faucibus augue. Etiam ac elementum sem, a iaculis mauris. Proin non imperdiet diam. In vel velit lacus. Aenean scelerisque molestie lacus.
+
+![](images/crime-scene.jpg)
+
+Integer pellentesque dolor ultrices nunc bibendum placerat. Sed vitae suscipit erat, nec malesuada felis. Aenean libero sapien, volutpat a blandit posuere, ornare ut libero. Sed eget magna lacinia enim aliquet congue sit amet ut lacus. In et tincidunt justo. Aenean mollis euismod neque quis ultrices. Maecenas tempor metus ut orci tempus, et dictum justo finibus. Vestibulum ullamcorper neque eget metus euismod, ornare viverra nulla tristique. Vivamus dui risus, mollis vitae mauris non, ullamcorper condimentum eros.
+
+[Next: Where is crime in NYC?](3-map.html)
