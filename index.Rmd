@@ -7,4 +7,4 @@ title: "Teen Sexual Health at the Turn of the Century"
 
 Summary goes here.
 
-<img src="/Users/rebeccaportman/Desktop/spring2017/dataviz/testsite/testsite/teenphoto.jpeg">
+<img src="testsite/teenphoto.jpeg">
