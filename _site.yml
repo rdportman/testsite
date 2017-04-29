@@ -10,3 +10,4 @@ navbar:
       href: 2-map.html
     - text: "Shiny App"
       href: 3-shiny.html
+output_dir: "."
