@@ -2,6 +2,6 @@
 title: "Teen Sexual Health Influences"
 ---
 
-Data from Add Health Wave 1:
+Data from <a href = "http://www.cpc.unc.edu/projects/addhealth">Add Health Wave 1</a>:
 
 <iframe src=" https://rdportman.shinyapps.io/app2/" style="border: none; width: 900px; height: 900px"></iframe>
