@@ -5,5 +5,7 @@ navbar:
   left:
     - text: "Home"
       href: index.html
+    - text: "Health Influences"
+      href: influences.html
     - text: "State-Level Trends"
       href: statetrends.html
