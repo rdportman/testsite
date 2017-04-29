@@ -1,8 +1,8 @@
 ---
 title: "Teen Sexual Health at the Turn of the Century"
 ---
-**Data Visualization (QMSS 4063)**
-**Final Project**
+**Data Visualization (QMSS 4063)** <br>
+**Final Project** <br>
 **Contributors: Michelle Grushko, Zach Heinemann, Meredith Meeks, Becca Portman**
 
 Summary goes here.
