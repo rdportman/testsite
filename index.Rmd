@@ -6,3 +6,5 @@ title: "Teen Sexual Health at the Turn of the Century"
 **Contributors: Michelle Grushko, Zach Heinemann, Meredith Meeks, Becca Portman**
 
 Summary goes here.
+
+<img src="/Users/rebeccaportman/Desktop/spring2017/dataviz/testsite/testsite/teenphoto.jpeg">
